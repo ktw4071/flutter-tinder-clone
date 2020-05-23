@@ -11,9 +11,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        // When navigating to the "/" route, build the FirstScreen widget.
         '/': (context) => HomeScreen(),
-        // When navigating to the "/second" route, build the SecondScreen widget.
         '/profile': (context) => ProfileScreen(),
         '/chat': (context) => ChatScreen(),
       },
