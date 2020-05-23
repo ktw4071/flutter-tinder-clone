@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'home_screen.dart';
+import 'profile_screen.dart';
 
 class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
@@ -12,13 +14,15 @@ class ChatScreen extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.person),
                 iconSize: 32,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
               ),
               IconButton(
                 icon: Icon(Icons.favorite),
                 iconSize: 32,
                 onPressed: () {
-                  Navigator.pop(context);
+                  Navigator.pushNamed(context, '/');
                 },
               ),
               IconButton(

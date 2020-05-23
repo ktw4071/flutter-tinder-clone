@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'chat_screen.dart';
+import 'profile_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         backgroundColor: Colors.pinkAccent,
         title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -12,7 +14,9 @@ class HomeScreen extends StatelessWidget {
               IconButton(
                 icon: Icon(Icons.person),
                 iconSize: 32,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/profile');
+                },
               ),
               IconButton(
                 icon: Icon(Icons.favorite),
@@ -23,10 +27,7 @@ class HomeScreen extends StatelessWidget {
                 icon: Icon(Icons.chat_bubble),
                 iconSize: 32,
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => ChatScreen()),
-                  );
+                  Navigator.pushNamed(context, '/chat');
                 },
               ),
             ]),
