@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'home_screen.dart';
-import 'profile_screen.dart';
 
 class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
