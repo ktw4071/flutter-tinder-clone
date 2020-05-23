@@ -4,7 +4,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
         backgroundColor: Colors.pinkAccent,
         title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -13,7 +13,7 @@ class HomeScreen extends StatelessWidget {
                 icon: Icon(Icons.person),
                 iconSize: 32,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/profile');
+                  Navigator.pushNamedAndRemoveUntil(context, '/profile', ModalRoute.withName('/'));
                 },
               ),
               IconButton(
@@ -25,7 +25,7 @@ class HomeScreen extends StatelessWidget {
                 icon: Icon(Icons.chat_bubble),
                 iconSize: 32,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/chat');
+                  Navigator.pushNamedAndRemoveUntil(context, '/chat', ModalRoute.withName('/'));
                 },
               ),
             ]),

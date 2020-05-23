@@ -4,7 +4,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          automaticallyImplyLeading: false,
+          // automaticallyImplyLeading: false,
           backgroundColor: Colors.pinkAccent,
           title: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -13,14 +13,14 @@ class ChatScreen extends StatelessWidget {
                 icon: Icon(Icons.person),
                 iconSize: 32,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/profile');
+                  Navigator.pushNamedAndRemoveUntil(context, '/profile', ModalRoute.withName('/'));
                 },
               ),
               IconButton(
                 icon: Icon(Icons.favorite),
                 iconSize: 32,
                 onPressed: () {
-                  Navigator.pushNamed(context, '/');
+                  Navigator.pop(context);
                 },
               ),
               IconButton(

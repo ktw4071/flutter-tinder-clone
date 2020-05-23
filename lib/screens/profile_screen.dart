@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-import 'chat_screen.dart';
 
 class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        automaticallyImplyLeading: false,
+        // automaticallyImplyLeading: false,
         backgroundColor: Colors.pinkAccent,
         title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,10 +25,7 @@ class ProfileScreen extends StatelessWidget {
               icon: Icon(Icons.chat_bubble),
               iconSize: 32,
               onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => ChatScreen()),
-                );
+                Navigator.pushNamedAndRemoveUntil(context, '/chat', ModalRoute.withName('/'));
               },
             ),
           ]),
